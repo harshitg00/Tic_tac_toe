@@ -58,7 +58,7 @@ function cc(){
     document.getElementById("cc").appendChild( scroll(arr[2][2]) );
     arr[2][2] = cnt%2;
 }
-
+let tie = 1;
 function check(){
     for(let i=0;i<3;i++){
         if(arr[i][0] == arr[i][1] && arr[i][1] == arr[i][2] && arr[i][0] != -1){
@@ -67,6 +67,7 @@ function check(){
             else alert("O is Winner");
             clearInterval(game);
             document.location.reload();
+            tie = 0;
         }
     }
     for(let i=0;i<3;i++){
@@ -75,7 +76,8 @@ function check(){
             alert("X is Winner");
             else alert("O is Winner");
             clearInterval(game)
-            document.location.reload();;
+            document.location.reload();
+            tie = 0;
         }
     }
     if(arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2] && arr[1][1] != -1){
@@ -83,16 +85,17 @@ function check(){
         alert("X is Winner");
         else alert("O is Winner");
         clearInterval(game);
-        document.location.reload();;
+        document.location.reload();
+        tie = 0;
     }
     if(arr[2][0] == arr[1][1] && arr[1][1] == arr[0][2] && arr[2][0] != -1){
         if(cnt%2==0)
         alert("X is Winner");
         else alert("O is Winner");
         clearInterval(game);
-        document.location.reload();;
+        document.location.reload();
+        tie = 0;
     }
-    tie = 1;
     for(let i=0;i<3;i++){
         for(let j = 0; j<3;j++){
             if(arr[i][j]==-1){
