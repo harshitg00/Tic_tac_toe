@@ -2,9 +2,9 @@
 let arr = [[-1,-1,-1],[-1,-1,-1],[-1,-1,-1]];
 let box = 100;
 const o = new Image();
-o.src = "./oo.png";
+o.src = "img/oo.png";
 const x = new Image();
-x.src = "./axe.png";
+x.src = "img/axe.png";
 o.height= box; x.height = box;
 o.width = box; o.width = box;
 
