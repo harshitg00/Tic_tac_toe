@@ -82,14 +82,27 @@ function check(){
         if(cnt%2==0)
         alert("X is Winner");
         else alert("O is Winner");
-        clearInterval(game)
+        clearInterval(game);
         document.location.reload();;
     }
     if(arr[2][0] == arr[1][1] && arr[1][1] == arr[0][2] && arr[2][0] != -1){
         if(cnt%2==0)
         alert("X is Winner");
         else alert("O is Winner");
-        clearInterval(game)
+        clearInterval(game);
+        document.location.reload();;
+    }
+    tie = 1;
+    for(let i=0;i<3;i++){
+        for(let j = 0; j<3;j++){
+            if(arr[i][j]==-1){
+                tie = 0; break;
+            }
+        }
+    }
+    if(tie){
+        alert("TIE!!");
+        clearInterval(game);
         document.location.reload();;
     }
 }
